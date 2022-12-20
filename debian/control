@@ -1,0 +1,65 @@
+Source: haskell-data-default
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Clint Adams <clint@debian.org>
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends: debhelper (>= 10),
+ haskell-devscripts (>= 0.13),
+ cdbs,
+ ghc (>= 8),
+ ghc-prof,
+ libghc-data-default-class-dev (>= 0.1.2.0),
+ libghc-data-default-class-prof,
+ libghc-data-default-instances-containers-dev,
+ libghc-data-default-instances-containers-prof,
+ libghc-data-default-instances-dlist-dev,
+ libghc-data-default-instances-dlist-prof,
+ libghc-data-default-instances-old-locale-dev,
+ libghc-data-default-instances-old-locale-prof,
+Build-Depends-Indep: ghc-doc,
+ libghc-data-default-class-doc,
+ libghc-data-default-instances-containers-doc,
+ libghc-data-default-instances-dlist-doc,
+ libghc-data-default-instances-old-locale-doc,
+Standards-Version: 4.5.0
+Homepage: http://hackage.haskell.org/package/data-default
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-data-default
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-data-default]
+
+Package: libghc-data-default-dev
+Architecture: any
+Depends: ${haskell:Depends},
+ ${shlibs:Depends},
+ ${misc:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Provides: ${haskell:Provides},
+Description: class for types with a default value${haskell:ShortBlurb}
+ It provides a class for types with a default value.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-data-default-prof
+Architecture: any
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Provides: ${haskell:Provides},
+Description: class for types with a default value${haskell:ShortBlurb}
+ It provides a class for types with a default value.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-data-default-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+ ${haskell:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Description: class for types with a default value${haskell:ShortBlurb}
+ It provides a class for types with a default value.
+ .
+ ${haskell:Blurb}
